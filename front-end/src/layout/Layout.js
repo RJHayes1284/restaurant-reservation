@@ -1,4 +1,4 @@
-import React from "react";
+import React from "React";
 import Menu from "./Menu";
 import Routes from "./Routes";
 

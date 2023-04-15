@@ -1,6 +1,6 @@
-import React from "react";
+import React from "React";
 
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "React-router-dom";
 import Dashboard from "../dashboard/Dashboard";
 import NotFound from "./NotFound";
 import { today } from "../utils/date-time";
