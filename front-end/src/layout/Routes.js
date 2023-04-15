@@ -1,4 +1,4 @@
-import react, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Redirect, Route, Switch, useRouteMatch } from "react-router-dom";
 import Dashboard from "../dashboard/Dashboard";
 import NotFound from "./NotFound";
@@ -8,7 +8,7 @@ import ReservationCreate from "./reservations/ReservationCreate";
 import ReservationSeat from "./reservations/ReservationSeat";
 import TableCreate from "./tables/TableCreate";
 import ReservationEdit from "./reservations/ReservationEdit";
-//mport ReservationSearch from "./ReservationSearch";
+import ReservationSearch from "./ReservationSearch";
 
 /**
  * Defines all the routes for the application.
@@ -42,9 +42,9 @@ function Routes() {
       </Route>
       <Route exact path="/tables">
         <Dashboard date={date} />
-        {/* </Route> */}
-        {/* <Route path="/search">
-        <ReservationSearch /> */}
+        </Route>
+        <Route path="/search">
+        <ReservationSearch />
       </Route>
       <Route path="/reservations/new">
         <ReservationCreate date={date} />

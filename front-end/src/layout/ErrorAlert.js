@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 
 /**
  * Defines the alert message to render if the specified error is truthy.

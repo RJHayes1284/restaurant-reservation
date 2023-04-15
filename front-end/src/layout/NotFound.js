@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 
 /**
  * Defines the "Not Found" page that is displayed for any unmatched route.
