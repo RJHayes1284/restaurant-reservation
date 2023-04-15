@@ -1,5 +1,5 @@
-import React, { useState } from "React";
-import { useHistory } from "React-router";
+import react, { useState } from "react";
+import { useHistory } from "react-router";
 import { createTable } from "../../utils/api";
 import ErrorAlert from "../ErrorAlert";
 

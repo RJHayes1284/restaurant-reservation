@@ -1,8 +1,8 @@
-import React, { useState } from "React";
+import react, { useState } from "react";
 import { createReservation } from "../../utils/api";
-import { useHistory } from "React-router";
+import { useHistory } from "react-router";
 import ErrorAlert from "../ErrorAlert";
-import ReservationForm from "../Reservations/ReservationForm";
+import ReservationForm from "../reservations/ReservationForm";
 
 function ReservationCreate() {
   const [reservation, setReservation] = useState({

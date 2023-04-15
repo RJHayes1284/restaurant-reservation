@@ -1,10 +1,10 @@
-import React, { useState } from "React";
+import react, { useState } from "react";
 import {
   deleteTableReservation,
   listTables,
   updateResStatus,
 } from "../../utils/api";
-import { useHistory } from "React-router-dom";
+import { useHistory } from "react-router-dom";
 import ErrorAlert from "../ErrorAlert";
 
 function TableDetail({ table }) {

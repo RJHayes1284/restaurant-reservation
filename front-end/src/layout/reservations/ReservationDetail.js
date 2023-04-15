@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "React";
-import { useHistory } from "React-router-dom";
+import react, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { updateResStatus, listTables } from "../../utils/api";
 import ErrorAlert from "../ErrorAlert";
-import { Link } from "React-router-dom";
+import { Link } from "react-router-dom";
 
 function ReservationDetail({ res }) {
   const [reservation, setReservation] = useState(res);

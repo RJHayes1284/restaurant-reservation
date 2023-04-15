@@ -1,4 +1,4 @@
-import React from "react";
+import react from "react";
 import { Route, Switch } from "react-router-dom";
 import Layout from "./layout/Layout";
 
@@ -8,11 +8,11 @@ import Layout from "./layout/Layout";
  */
 function App() {
   return (
-      <Switch>
-        <Route path="/">
-          <Layout />
-        </Route>
-      </Switch>
+    <Switch>
+      <Route path="/">
+        <Layout />
+      </Route>
+    </Switch>
   );
 }
 
