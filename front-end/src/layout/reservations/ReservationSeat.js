@@ -22,7 +22,7 @@ function ReservationSeat() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const tableObj = JSON.parse(tableFormData);
+    const tableObj = tableFormData;
     updateSeat(tableObj.table_id, reservation_id)
       .then((response) => {
         const newTables = tables.map((table) => {
