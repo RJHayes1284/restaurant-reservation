@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { listTables, readReservation, seatReservation } from "../../utils/api";
-import ErrorAlert from "../ErrorAlert";
+import ErrorAlert from "../ErrorHandler";
 
 function SeatTable() {
   const initial = { table_id: "" };

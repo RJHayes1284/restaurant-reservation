@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { clearTable } from "../../utils/api";
-import ErrorAlert from "../ErrorAlert";
+import ErrorAlert from "../ErrorHandler";
 
 function TableView({ table }) {
   const { capacity, reservation_id, table_id, table_name } = table;

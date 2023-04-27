@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { updateStatus } from "../../utils/api";
-import ErrorAlert from "../ErrorAlert";
+import ErrorAlert from "../ErrorHandler";
 
 function ReservationView({ reservation }) {
   const [showError, setShowError] = useState(null);

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { listReservations } from "../../utils/api";
-import ErrorAlert from "../ErrorAlert";
+import ErrorAlert from "../ErrorHandler";
 import ReservationView from "./ReservationView";
 
 function SearchReservations() {
