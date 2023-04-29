@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { listReservations, listTables } from "../utils/api";
 import { previous, next } from "../utils/date-time";
+<<<<<<< HEAD
 import ErrorAlert from "../layout/ErrorHandler";
 import { useLocation, useHistory } from "react-router-dom";
 import ReservationDetail from "../layout/reservations/ReservationView";
 import TableDetail from "../layout/tables/TableView";
+=======
+import ErrorAlert from "../layout/ErrorAlert";
+import { useLocation, useHistory } from "react-router-dom";
+import ReservationDetail from "../layout/reservations/ReservationDetail";
+import TableDetail from "../layout/tables/TableDetail";
+>>>>>>> parent of 9bd8efd (updated tables)
 
 function Dashboard({ date }) {
   const [reservations, setReservations] = useState([]);

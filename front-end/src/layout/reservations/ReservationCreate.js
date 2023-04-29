@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { createReservation } from "../../utils/api";
 import { useHistory } from "react-router";
-import ErrorAlert from "../ErrorHandler";
-import ReservationForm from "./ReservationForm";
+import ErrorAlert from "../ErrorAlert";
+import ReservationForm from "../reservations/ReservationForm";
 
-function NewReservation() {
+function ReservationCreate() {
   const [reservation, setReservation] = useState({
     first_name: "",
     last_name: "",
@@ -51,4 +51,4 @@ function NewReservation() {
 }
 
 
-export default NewReservation;
+export default ReservationCreate;
