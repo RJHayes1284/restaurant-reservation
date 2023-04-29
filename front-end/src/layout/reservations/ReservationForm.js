@@ -1,88 +1,115 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
-
-function ReservationForm({ form, handleChange, handleSubmit }) {
-  const history = useHistory();
-
+function ReservationForm({
+  handleSubmit,
+  handleChange,
+  history,
+  reservation
+}) {
   return (
-    <form className="d-flex flex-column" onSubmit={handleSubmit}>
-      <label htmlFor="first_name">
-        First Name:
+    <>
+    <form onSubmit={handleSubmit} className="form-group">
+    <div className="row mb-3">
+      <div className="col-4 form-group">
+        <label className="form-label" htmlFor="first_name">
+          First Name
+        </label>
         <input
-          className="form-control my-2"
+          className="form-control"
+          id="first_name"
           name="first_name"
-          value={form["first_name"]}
           type="text"
           onChange={handleChange}
+          required={true}
+          value={reservation.first_name}
         />
-      </label>
-      <label htmlFor="last_name">
-        Last Name:
+        <small className="form-text text-muted"> Enter First Name </small>
+      </div>
+      <div className="col-4">
+        <label className="form-label" htmlFor="last_name">
+          Last Name
+        </label>
         <input
-          className="form-control my-2"
+          className="form-control"
+          id="last_name"
           name="last_name"
-          value={form["last_name"]}
           type="text"
           onChange={handleChange}
+          required={true}
+          value={reservation.last_name}
         />
-      </label>
-      <label htmlFor="mobile_number">
-        Phone Number:
+        <small className="form-text text-muted"> Enter Last Name </small>
+      </div>
+    </div>
+    <div className="row mb-3">
+      <div className="col-4 form-group">
+        <label className="form-label" htmlFor="mobile_number">
+          Mobile Number
+        </label>
         <input
-          className="form-control my-2"
+          className="form-control"
+          id="mobile_number"
           name="mobile_number"
-          value={form["mobile_number"]}
-          placeholder="(---) --- ----"
-          type="tel"
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="reservation_date">
-        Reservation Date:
-        <input
-          className="form-control my-2"
-          name="reservation_date"
-          value={form["reservation_date"]}
-          pattern="\d{4}-\d{2}-\d{2}"
-          placeholder="YYYY-MM-DD"
-          type="date"
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="reservation_time">
-        Reservation Time:
-        <input
-          className="form-control my-2"
-          name="reservation_time"
-          value={form["reservation_time"]}
-          pattern="[0-9]{2}:[0-9]{2}"
-          placeholder="HH:MM"
-          type="time"
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="people">
-        Party Size:
-        <input
-          className="form-control my-2"
-          name="people"
-          value={form["people"]}
-          min={1}
-          placeholder={1}
           type="number"
           onChange={handleChange}
+          required={true}
+          placeholder="(xxx) xxx-xxxx"
+          value={reservation.mobile_number}
         />
-      </label>
-      <div className="d-flex justify-content-around m-3">
-        <button className="btn btn-success" type="submit">
-          Submit
-        </button>
-        <button className="btn btn-danger" onClick={() => history.goBack()}>
-          Cancel
-        </button>
+        <small className="form-text text-muted"> Enter Mobile Number </small>
       </div>
-    </form>
-  );
+      <div className="col-4 form-group">
+        <label className="form-label" htmlFor="mobile_number">
+          Party Size
+        </label>
+        <input
+          className="form-control"
+          id="people"
+          name="people"
+          type="number"
+          onChange={handleChange}
+          required={true}
+          value={reservation.people}
+        />
+        <small className="form-text text-muted"> Enter Party Size </small>
+      </div>
+    </div>
+    <div className="row mb-3">
+      <div className="col-4 form-group"> 
+      <label>
+        Reservation Date
+      </label>
+      <input
+        className="form-control"
+        id="reservation_date"
+        name="reservation_date"
+        type="date"
+        onChange={handleChange}
+        required={true}
+        value={reservation.reservation_date}
+      />
+      <small className="form-text text-muted"> Enter Reservation Date (Closed on Tuesdays) </small>
+      </div>
+      <div className="col-4 form-group"> 
+      <label>
+        Reservation Time
+      </label>
+      <input
+        className="form-control"
+        id="reservation_time"
+        name="reservation_time"
+        type="time"
+        onChange={handleChange}
+        required={true}
+        value={reservation.reservation_time}
+      />
+      <small className="form-text text-muted"> Enter Reservation Time </small>
+      </div>
+    </div>
+    <button type="button" onClick={() => history.goBack()} className="btn btn-secondary mr-2"> Cancel </button>
+    <button type="submit" className="btn btn-primary"> Submit Reservation </button>
+  </form>
+</>
+)
 }
+
 
 export default ReservationForm;

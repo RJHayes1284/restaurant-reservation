@@ -12,8 +12,13 @@
     "preinstall": "cd ./back-end && npm install",
     "install": "cd ./front-end && npm install",
     "start": "npx concurrently 'npm run start:backend' 'npm run start:frontend'",
+<<<<<<< HEAD
     "start:back-end": "npm --prefix ./back-end start",
     "start:front-end": "npm --prefix ./front-end start",
+=======
+    "start:backend": "npm --prefix ./back-end start",
+    "start:frontend": "npm --prefix ./front-end start",
+>>>>>>> parent of 3b5ce41 (fixed reservation error)
     "start:dev": "npx concurrently \"npm run start:dev --prefix ./back-end\" \"npm start --prefix ./front-end\" ",
     "test": "npm run test:frontend && npm run test:backend",
     "test:backend": "npm test --prefix ./back-end",
