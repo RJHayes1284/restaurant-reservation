@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 import ErrorAlert from "../ErrorHandler";
 import ReservationForm from "./ReservationForm";
 
-function NewReservation() {
+function ReservationCreate() {
   const [reservation, setReservation] = useState({
     first_name: "",
     last_name: "",
@@ -51,4 +51,4 @@ function NewReservation() {
 }
 
 
-export default NewReservation;
+export default ReservationCreate;
