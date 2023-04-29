@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { createReservation } from "./../utils/api";
 import { useHistory } from "react-router";
-import ErrorAlert from "./ErrorAlert";
-import ReservationForm from "./reservations/ReservationForm";
+import ErrorAlert from "./ErrorHandler";
+import ReservationForm from "./reservations/ReservationForm"
 
-function ReservationCreate() {
+function NewReservation() {
   const [reservation, setReservation] = useState({
     first_name: "",
     last_name: "",
@@ -16,13 +16,13 @@ function ReservationCreate() {
 
   const [error, setError] = useState(null);
   const history = useHistory();
-  
+
   const handleChange = ({ target }) => {
     setReservation({
       ...reservation,
       [target.name]: target.value,
     });
-  }
+  };
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -34,7 +34,7 @@ function ReservationCreate() {
         history.push(`/dashboard?date=${reservation.reservation_date}`);
       })
       .catch(setError);
-  } 
+  }
 
   return (
     <div className="new-reservation">
@@ -50,5 +50,4 @@ function ReservationCreate() {
   );
 }
 
-
-export default ReservationCreate;
+export default NewReservation;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { createTable } from "../../utils/api";
-import ErrorAlert from "../ErrorAlert";
+import ErrorAlert from "../ErrorHandler";
 
 function TableCreate() {
   const [error, setError] = useState(null);
