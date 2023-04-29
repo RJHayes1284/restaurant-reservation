@@ -1,4 +1,4 @@
-const service = require('./reservations.services');
+const service = require('./reservations.service');
 const asyncErrorBoundary = require('../errors/asyncErrorBoundary');
 
 // Validation Middleware
